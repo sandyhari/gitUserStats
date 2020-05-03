@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+  html,
+  body,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roboto", sans-serif
+  }
+  h1{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+
+  #ip2 {
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 20px;
+    width: 50%;
+    height: 15px;
+    textShadow :
+  }
+</style>
+
+<body class="w3-light-grey">
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+    <div class="w3-row-padding">
+      <h1 class="w3-text-blue-grey w3-hover-text-brown:hover{color:#795548!important} w3-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}">Git-Hub User stats</h1>
+      <input type="text" placeholder="Enter Username :" id="ip2" required/><span><button class="w3-button w3-red w3-round-xxlarge" onclick="search()">Get Details</button></span>
+      <div class="w3-third">
+        <div class="w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container">
+            <img id='profilepic' src="blank.png" style="width:100%" alt="Avatar">
+            <div class="w3-display-bottomleft w3-container w3-text-black">
+              <h2 id='pr'>profilename</h2>
+            </div>
+          </div>
+          <div class="w3-container">
+            <p id='bio'></p>
+            <p id='locationinfo'></p>
+            <p id='emailid'></p>
+            <p id='acctCreatedon'></p>
+            <p id='followers'></p>
+            <hr>
+            <br>
+          </div>
+        </div><br>
+      </div>
+      <div class="w3-twothird">
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>You have <span class='w3-text-red' id='repoCount'></span> Repos. </h2>
+          <div class="w3-container" id='repoList'>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="w3-container w3-teal w3-center w3-margin-top">
+    <p>Say Hi in .</p>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </footer>
+  <script type="text/javascript" src='promiseVsAsyncAwaitAPIcalls.js'>
+
+  </script>
+</body>
+
+</html>
