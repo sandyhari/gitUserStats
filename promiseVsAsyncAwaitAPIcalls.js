@@ -12,7 +12,6 @@ function search(){
     .then((res) => res.json())
     .then((user) => {
       console.log(user);
-      console.log(user.location);
       document.getElementById("pr").innerHTML = user.name == null ? user.login:user.name;
       document.getElementById("profilepic").src = user.avatar_url;
       document.getElementById("bio").innerHTML = user.bio == null ? 'BIO : No Bio of you' : `BIO : ${user.bio}`;
@@ -26,21 +25,26 @@ function search(){
       console.log(repouser);
       const rootDiv = document.getElementById("repoList");
       for (var i = 0; i < repouser.length; i++) {
-        const tdname = document.createElement('h5');
+        const tdname = document.createElement('a');
         const tdDate = document.createElement('h6');
         const horizon = document.createElement('hr');
         const description = document.createElement('p');
+        const repoViewers = document.createElement('p');
         const breaked = document.createElement('br');
         tdname.classList.add("w3-opacity");
         tdDate.classList.add("w3-text-teal");
         tdname.innerHTML = "<b>"+repouser[i].name+"</b>";
+        tdname.href = repouser[i].html_url;
+        tdname.target="_blank";
         tdDate.innerHTML = "Created on :"+repouser[i].created_at.toString().slice(0,10);
-        description.innerHTML = repouser.description == null ? 'No Description provided for this Repo':user.description;
+        description.innerHTML = repouser[i].description == null ? 'No Description provided for this Repo':repouser[i].description;
+        repoViewers.innerHTML = `This Repo viewed by ${repouser[i].watchers}`;
         rootDiv.appendChild(horizon);
         rootDiv.appendChild(tdname);
         rootDiv.appendChild(tdDate);
         rootDiv.appendChild(description);
-        rootDiv.appendChild(breaked);
+        rootDiv.appendChild(repoViewers);
+        //rootDiv.appendChild(breaked);
       }
     })
   };
